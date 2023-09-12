@@ -1,0 +1,215 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(115deg, #75cee7 0%, #dbeaf3 100%);
+}
+* {
+  box-sizing: border-box;
+}
+
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+
+.open-button {
+  background-color: #5781ec;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  top: 23px;
+  right: 28px;
+  width: 210px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  top: 10px;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+  border-radius: .9rem;
+
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+  border-radius: .9rem;
+}
+
+/* Full-width input fields */
+.form-container input[type="text"],
+.form-container input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type="text"]:focus,
+.form-container input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04aa6d;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover,
+.open-button:hover {
+  opacity: 1;
+}
+
+#symbol {
+  text-align: center;
+  border-top: 2px solid black;
+  border-bottom: 2px dotted blue;
+}
+
+#view-toggler{
+  margin-top: 40px;
+}
+
+.button-85 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-85:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+#habit-container {
+  height: 60vh;
+  overflow-y: scroll;
+}
+
+#habit-container-list {
+  list-style-type: none;
+}
+
+#weekly-status-list{
+  display: none;
+  list-style-type: none;
+}
+
+.habit-container-item {
+  border-radius: 5px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+  margin-bottom: 10px;
+  width: 92vw;
+  padding: 10px;
+}
+
+.habit-weekly-container-list-item{
+  border-radius: 5px;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  margin-bottom: 10px;
+  width: 92vw;
+  padding: 15px;
+}
+
+.habit-description-weekly{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px dotted black;
+}
+
+.habit-daywise-container{
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.week-day-status{
+  padding: 10px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+  width: 10vw;
+  border-radius: 5px;
+}
+#habit-container::-webkit-scrollbar {
+  display: none;
+}
+
