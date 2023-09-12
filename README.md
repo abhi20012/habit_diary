@@ -1,12 +1,12 @@
 # Habit Tracker App
-## It is a web app made using React JS which allows the user to keep a track of the habits for a week. User can add new habits and can delete previous habits.
-## User can keep the track of a habit by marking the days of the corresponding habit with done, not-done or leaving it blank.
+It is a web app made using  EJS and NodeJS which allows the user to keep a track of the habits for a week. User can add new habits and can delete previous habits.
+ User can keep the track of a habit by marking the days of the corresponding habit with done, not-done or leaving it blank.
 ## Hosted URL : https://habitdiary-676f4.web.app/
 
 
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with node.js and ejs (https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
@@ -15,7 +15,7 @@ In the project directory, you can run:
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [http://localhost:8000](http://localhost:8000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
